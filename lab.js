@@ -233,14 +233,32 @@ let cat1 = new Cat('Tibs', 9, 'black')
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
-  Create a class called 'Wizard'. Make sure to call your constructor, and require these 3 parameters: name, age, favoriteSpell.
-  Add a function to your Wizard class called castSpell. This function should print "{name} has cast {favoriteSpell}"
+  Create a class called 'Wizard'. Make sure to call your constructor, and require these 3 parameters: 
+  name, age, favoriteSpell.
+  Add a function to your Wizard class called castSpell. 
+  This function should print "{name} has cast {favoriteSpell}"
   Outside of your class, create an instance of your Wizard, passing in whatever values you would like.
   Call the castSpell function on the instance of your wizard.
 */
 
 //Code here
 
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+
+castSpell() {
+  console.log(`${this.name} has cast ${this.favoriteSpell}.`)
+  }
+} 
+
+
+let wizard1 = new Wizard ('Merlin', 587, 'Fireball');
+
+wizard1.castSpell()
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
     Write a class called Phone. We'll use it as if we were creating
@@ -255,7 +273,8 @@ let cat1 = new Cat('Tibs', 9, 'black')
     and it won't be sold yet. 
 
     Create a method called 'sell'.
-    sell should be a function that changes the value of sold to true and prints the string: '{brand} {model} has been sold.'
+    sell should be a function that changes the value of sold to true and prints the string:
+     '{brand} {model} has been sold.'
     
     Create another method called 'changePrice'. We can use this 
     to change the price in case a phone isn't selling.
@@ -265,6 +284,26 @@ let cat1 = new Cat('Tibs', 9, 'black')
 */
 
 //Code Here
+
+class Phone {
+  constructor(brand, model, storage, color, price, sold){
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
+
+  sell() {
+    this.sold = true
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+
+  changePrice(newPrice) {
+      this.price = newPrice
+  }
+}
 
   
 /*
@@ -279,6 +318,11 @@ let cat1 = new Cat('Tibs', 9, 'black')
 
 //Code Here
 
+ let phone1 = new Phone ("Samsung", "Galaxy S10", 99878987, "Pink", 7500, false)
+ let phone2 = new Phone ("IPhone", "IPhone 13", 69769697, "White", 15000, false)
+ let phone3 = new Phone ("Google", "Pixle", 6756478456, "Black", 650, false)
+
+
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -288,6 +332,8 @@ let cat1 = new Cat('Tibs', 9, 'black')
 
 //Code Here 
 
+phone2.changePrice(500)
+console.log(phone2['price'])
 
 /*
   Now call the sell method on one of your other phone objects
@@ -297,6 +343,8 @@ let cat1 = new Cat('Tibs', 9, 'black')
 
 //Code Here 
 
+phone1.sell()
+console.log(phone1.sold)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
