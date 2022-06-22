@@ -145,20 +145,13 @@ function greeting( obj ) {
 
 //Code Here
 
-let propertyValue = {
-  utah: 100,
-  california: 200,
-  texas: 300,
-  arizona: 5000,
-}
-let {utah: utahValue, california: californiaValue, texas: texasValue, arizona: arizonaValue} = propertyValue
+
 ;
 function totalPopulation(obj) {
-  let (utahValue + californiaValue + texasValue + arizonaValue)
-    return sum
+  let {utah, california, texas, arizona} = obj
+    return (utah + california + texas + arizona)
   }
 
-totalPopulation()
 
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
@@ -173,11 +166,16 @@ totalPopulation()
 
 //Code Here
 
+function ingredients(obj){
+  let {carb, fat, protein} = obj;
+  return [carb, fat, protein];
+}
+
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
-var user = {
+let user = {
   name: 'Bryan',
   age: 24,
   pwHash: 'U+Ldlngx2BYQk',
@@ -195,6 +193,8 @@ var user = {
 
 //Code Here
 
+user.name = 'Bryan G. Smith';
+user.email = 'bryan.smith@devmounta.in';
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
