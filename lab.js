@@ -196,6 +196,8 @@ let user = {
 user.name = 'Bryan G. Smith';
 user.email = 'bryan.smith@devmounta.in';
 
+//console.log(user.name)
+
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
   Using the user object above, delete the users age off of the object.
@@ -203,6 +205,9 @@ user.email = 'bryan.smith@devmounta.in';
 
 //Code Here
 
+delete user.age;
+
+//console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -213,7 +218,18 @@ user.email = 'bryan.smith@devmounta.in';
 
 //Code here
 
+class Cat {
+  constructor(name, age, color){
+  this.name = name;
+  this.age = age;
+  this.color = color;
+  }
+}
 
+
+let cat1 = new Cat('Tibs', 9, 'black')
+
+//console.log(cat1)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
