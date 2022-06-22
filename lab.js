@@ -351,7 +351,8 @@ console.log(phone1.sold)
 /*
   Use the spread operator to create a copy of the colors object below.
   Store the copy in a variable called colorsCopy.
-  Note: We did not cover the spread operator in class. We do not expect you to know how to use it. Challenge yourself by going online and researching what the spread operator is and how to use it.
+  Note: We did not cover the spread operator in class. We do not expect you to know how to use it. 
+  Challenge yourself by going online and researching what the spread operator is and how to use it.
 */
 
 //do not edit this object
@@ -364,6 +365,7 @@ const colors = {
 
 //Code Here 
 
+const colorcopy = {...colors}
 
 
 /*
@@ -392,7 +394,8 @@ const shippingInfo = {
 
 //Code Here
 
-
+const helenInfo = {...contactInfo, ...shippingInfo,} 
+console.log(helenInfo)
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
 
@@ -409,6 +412,18 @@ const shippingInfo = {
 */
 
 //Code Here 
+class Vehicle {
+  constructor(capacity, color, mileage){
+    this.capacity = capacity;
+    this.color = color;
+    this.mileage = mileage;
+  }
+
+  move(miles){
+    this.mileage += miles 
+    console.log(this.mileage);
+  }
+}
 
 
 /*
@@ -416,6 +431,8 @@ const shippingInfo = {
 */
 
 //Code Here
+
+let myFirstVehicle = new Vehicle(5, 'gray', 175000)
 
 
 /* 
@@ -428,15 +445,30 @@ const shippingInfo = {
 
 //Code Here
 
+class Motorcycle extends Vehicle {
+    constructor(capacity, color, mileage, make, isCool){
+      super(capacity, color, mileage)
+
+      this.make = make
+      this.isCool = isCool
+    }
+}
+
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
 
+let myFirstMotorcycle = new Motorcycle(2, 'blue', 25000, "Scooter", true);
+
+
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
+
+myFirstMotorcycle.move(4000)
+
 
 /*
   Let's make another class based off of Vehicle. 
